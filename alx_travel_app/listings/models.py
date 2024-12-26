@@ -8,7 +8,7 @@ class Listings(models.Model):
     listing_id = models.CharField(
         primary_key=True,
         max_length=36,
-        default=str(uuid.uuid4()),
+        default=uuid.uuid4(),
         editable=False
     )
     name = models.CharField(max_length=63, null=False, blank=False)
@@ -34,7 +34,7 @@ class Booking(models.Model):
     booking_id = models.CharField(
         primary_key=True,
         max_length=36,
-        default=str(uuid.uuid4()),
+        default=uuid.uuid4(),
         editable=False
     )
     listing = models.ForeignKey(Listings, on_delete=models.CASCADE, related_name='bookings')
@@ -60,7 +60,7 @@ class Review(models.Model):
     review_id = models.CharField(
         primary_key=True,
         max_length=36,
-        default=str(uuid.uuid4()),
+        default=uuid.uuid4(),
         editable=False
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
