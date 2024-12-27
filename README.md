@@ -23,7 +23,7 @@
 # Setup Project
 1. Clone the repository
 ```bash
-git clone https://github.com/Y-Baker/alx_travel_app.git
+git clone https://github.com/Y-Baker/alx_travel_app_0x00.git
 ```
 
 2. Start Virtual Environment
